@@ -32,7 +32,7 @@ function App() {
   
   {/* <TextForm heading="Enter text to analyze" upper="Convert to Uppercase" mode={mode}/> */}
 
-      <BrowserRouter basename='textutils'>
+      <BrowserRouter basename='/textutils'>
       <Navbar title="textutils"  aboutText="About" mode={mode} toggleMode={toggleMode}/>
  
     <div className='container my-3' >
