@@ -4,12 +4,12 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import React,{useState} from 'react';
 // import TodoForm from './components/TodoForm';
-import {
-  BrowserRouter,
-  Route,
-  Routes,
+// import {
+//   BrowserRouter,
+//   Route,
+//   Routes,
 
-} from "react-router-dom";
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode ] = useState('light');
@@ -29,11 +29,17 @@ function App() {
   }
   return (
 <>
-  
-  {/* <TextForm heading="Enter text to analyze" upper="Convert to Uppercase" mode={mode}/> */}
+<Navbar title="textutils"  mode={mode} toggleMode={toggleMode}/>
 
-      <BrowserRouter basename='/textutils'>
-      <Navbar title="textutils"  aboutText="About" mode={mode} toggleMode={toggleMode}/>
+
+  <div className='container my-3'>    
+    
+    <TextForm heading="Enter text to analyze" upper="Convert to Uppercase" mode={mode}/>
+    {/* <About mode={mode}/> */}
+  
+  </div>
+
+      {/* <BrowserRouter basename='/textutils'>
  
     <div className='container my-3' >
 
@@ -43,7 +49,7 @@ function App() {
         </Routes>
       </div>
 
-    </BrowserRouter>
+    </BrowserRouter> */}
 
 </>
   )
